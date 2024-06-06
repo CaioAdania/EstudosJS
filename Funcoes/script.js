@@ -124,16 +124,57 @@ function repetirFrase(frase, n=2) {
 }
 
 repetirFrase("Testando", 5);
-repetirFrase("Só duas Vezes"); //neste caso como não foi definido um valor, ele manteve o padrão definido que no caso é 2 
+repetirFrase("Só duas Vezes"); //não foi definido um valor, ele manteve o default 
 //---------------------
 function potencia(base, exp=2){
     return Math.pow(base, exp);
 }
 
-console.log(potencia(2));
+console.log(potencia(2)); //não foi definido um valor, logo ele considera o valor default
 
 console.log(potencia(2,2));
 
 console.log(potencia(2,3));
 
 //-----------------------------------------------
+//Closure uma função que se lembra do ambiente em que ela foi criada
+
+function armazenarSoma(x) {
+    return y => x + y;
+}
+
+let soma10 = armazenarSoma(3);
+console.log(soma1(5));
+
+let soma20 = armazenarSoma(5);
+console.log(soma2(10));
+
+//---------------------------------------------------
+//Argumento Recursion, Uma funcionalidade que permite uma função se chamar novamente, e isso pode ser um problema.
+
+function retornarNumeroPar(n) {
+    if(n%2 == 0) {
+        console.log("n agora é par: " + n);
+    } else {
+        console.log(n);
+        retornarNumeroPar(n -1);
+    }
+}
+
+retornarNumeroPar(32);
+
+//---------------------------------------------------------
+function recursao(n) {
+    if(n - 1 < 2) {
+        console.log("Recursão parou");
+    }else if(n % 2 != 0) {
+        console.log("Número ímpar " + n);
+        recursao(n - 1);
+    }else{
+        console.log("Número par " + n);
+        recursao(n - 2);
+    }
+}
+
+recursao(5);
+recursao(10);
