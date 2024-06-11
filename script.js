@@ -1,12 +1,19 @@
-let onibus = {
-    rodas : 8,
-    limitedepassageiros : 40,
-    portas : 2
+let calculadora = {
+    soma: function(a, b) {
+        return a + b;
+    },
+    subtrair: function(a, b) {
+        return a - b;
+    },
+    multiplicar: function(a, b) {
+        return a * b;
+    },
+    dividir: function(a, b) {
+        return a / b;
+    }
 }
 
-delete onibus.rodas;
-
-onibus.janelas = 20;
-
-console.log(onibus);
-console.log(onibus.janelas);
+console.log(calculadora.soma(3,4));
+console.log(calculadora.subtrair(3,4));
+console.log(calculadora.multiplicar(3,4));
+console.log(calculadora.dividir(3,4));
