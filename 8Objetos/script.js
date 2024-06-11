@@ -49,13 +49,13 @@ let pessoa1 = {
 
 console.log(pessoa1.nome);
 
-delete pessoa1.nome;
+delete pessoa1.nome; //deletando
 
 console.log(pessoa1.nome);
 
 console.log(pessoa1);
 
-pessoa1.casado = false;
+pessoa1.casado = false; //criando
 
 console.log(pessoa1.casado);
 
