@@ -1,27 +1,24 @@
-/*
-- O prototype do JavaScript pode ser chamado de class
-- Pois nas outras linguagens uma Class é um molde de um objeto
-- Ou seja, podemos criar diversos objetos em cima de um prototype
-*/
-
-let cachorro = { //foi criado um object cachorro
-    raca: "srd",
-    patas: 4,
-    latir: function() {
-        console.log("Au au");
+class Mamifero {
+    constructor(patas) { //classe pai da herança
+        this.patas = patas;
     }
 }
 
-let labrador = Object.create(cachorro); //foi criado um object pastorAlemao a partir de cachorro
+let coiote = new Mamifero(4);
 
-labrador.latir();
-labrador.raca = "Labrador"; //foi dito que a raca recebeu o nome pastor alemão, pois agora pastorAlemao virou um object
+console.log(coiote.patas);
 
-console.log(labrador.raca); //logo quando chamamos pastorAlemao.raca, ele considera como se fosse cachorro.raca
-console.log(cachorro.raca);
+class Cachorro extends Mamifero {
+    constructor(patas, raca) {
+        super(patas, patas);
+        this.raca = raca;
+    }
 
-let pastor = Object.create(cachorro);  //aqui criamos outra classe
+    latir(){
+        console.log("au au");
+    }
+}
 
-pastor.raca = "Pastor Alemão";
+let pug = new Cachorro(4, "pug");
 
-console.log(pastor.raca);
+console.log(pug.patas);

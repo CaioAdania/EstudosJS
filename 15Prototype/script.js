@@ -26,3 +26,4 @@ let pessoaNova = Object.create(pessoa1);
 
 console.log(pessoaNova.maos);
 console.log(Object.getPrototypeOf(pessoaNova) == pessoa1);
+
