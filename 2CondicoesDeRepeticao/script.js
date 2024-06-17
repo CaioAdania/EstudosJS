@@ -110,5 +110,3 @@ A posição 2 tem o valor 9
 A posição 3 tem o valor 2
 A posição 4 tem o valor 5*/
 
-//------------------------------------------
-/* */
